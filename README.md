@@ -17,7 +17,7 @@ nano ./nginx/config/web.conf
 ```
 
 ## Acesso ao banco de dados
-- acesse localhost:8080
+- acesse: localhost:8080
 - user: root
 - pass: root
-- server: db ( como foi definido no docker-compose.yml )
+- server: mariadb ( como foi definido no docker-compose.yml )
