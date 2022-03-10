@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+docker exec -it --user www-data php7fpm bash

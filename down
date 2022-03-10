@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+docker-compose down && \
+printf "\e[32mBye \n";

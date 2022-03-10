@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+printf '\e[32mCrinado container\n';
+docker-compose build
