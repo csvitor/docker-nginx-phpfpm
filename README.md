@@ -2,7 +2,7 @@
 
 ## 1° Download
 ```console
-git clone https://github.com/csvitor/nginx-php7.4fpm-in-docker.git "projeto" 
+git clone https://github.com/csvitor/docker-nginx-phpfpm.git "projeto" 
 ```
 ```console
 cd projeto
