@@ -93,7 +93,6 @@ services:
       - 9300:9300
     networks: 
      - web-net
-
 volumes:
   elasticsearch-data:
     driver: local
