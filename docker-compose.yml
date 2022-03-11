@@ -69,9 +69,6 @@ services:
       - 8025:8025
     networks: 
      - web-net
-volumes:
-  elasticsearch-data:
-    driver: local
 
 networks:
    web-net:
