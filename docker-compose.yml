@@ -12,6 +12,7 @@ services:
     links:
       - mariadb
       - "redis-session"
+      - elasticsearch
     networks: 
      - web-net
   nginx:
@@ -69,6 +70,34 @@ services:
       - 8025:8025
     networks: 
      - web-net
+  # Elasticsearch Docker Images: https://www.docker.elastic.co/
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.4.0
+    container_name: elasticsearch
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    cap_add:
+      - IPC_LOCK
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9300:9300
+    networks: 
+     - web-net
+
+volumes:
+  elasticsearch-data:
+    driver: local
+
 networks:
    web-net:
      driver: bridge
